@@ -42,7 +42,7 @@ framework:
   name: raw
   args:
     # List of devices to run tests on (two Pixel 5 devices in this case)
-    devices: ["Galaxy S22 Ultra 5G"]
+    devices: [".*"]
     # Enable or disable video recording support
     video: true
     # Enable or disable device log support
@@ -61,3 +61,4 @@ framework:
     isRealMobile: true
     reservation: false
     platformName: android
+jobLabel: ['HyperExecute', 'Maestro', 'Real Device']
