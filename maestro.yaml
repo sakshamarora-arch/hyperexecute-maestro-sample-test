@@ -3,7 +3,7 @@ version: "0.2"
 runson: ios
 
 autosplit: true
-concurrency: 3
+concurrency: 2
 
 env:
   MAESTRO: true
@@ -39,4 +39,4 @@ framework:
     reservation: false
     platformName: ios
 
-jobLabel: ['HyperExecute', 'Maestro', iOS-Simulator']
+jobLabel: ['HyperExecute', 'Maestro', 'iOS-Simulator']

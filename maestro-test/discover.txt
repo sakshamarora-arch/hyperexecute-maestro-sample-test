@@ -1,3 +1,2 @@
-maestro/ios-bat-dashboard.yml
-maestro/ios-bat-navMenu.yml
-maestro/ios-bat-settings.yml
+ios-launch.yaml
+ios-swipe.yaml
