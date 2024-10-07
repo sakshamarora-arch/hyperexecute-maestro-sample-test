@@ -1,0 +1,42 @@
+---
+version: "0.2"
+runson: ios
+
+autosplit: true
+concurrency: 2
+
+env:
+  MAESTRO: true
+
+pre:
+  - chmod +x ./maestro-test/setup-script.sh
+  - chmod +x ./maestro-test/runTest.sh
+  - ./maestro-test/setup-script.sh
+
+testDiscovery:
+  command: cat ./maestro-test/discover.txt
+  mode: static
+  type: raw
+
+testRunnerCommand: ./maestro-test/runTest.sh $test
+
+frameworkStatusOnly: true
+dynamicAllocation: true
+
+framework:
+  name: raw
+  args:
+    devices: ["iPhone 14.*"]
+    video: true
+    deviceLog: true
+    appId: APP_ID
+    buildName: maestro-ios-simulator
+    privateCloud: true
+    queueTimeout: 600
+    region: us
+    disableReleaseDevice: true
+    isRealMobile: false
+    reservation: false
+    platformName: ios
+
+jobLabel: ['HyperExecute', 'Maestro', 'iOS-Simulator']

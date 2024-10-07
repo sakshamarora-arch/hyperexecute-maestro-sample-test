@@ -14,4 +14,4 @@ Support for directly running Maestro Tests on the device at Lambdatest using Hyp
 5. Use this curl to upload app  and for getting the app_id for passing it in the script -
 curl -u "<username>:<accessKey>" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<local_app_path>"" -F "name="sampleApp""
 ```
-6. To start the test  `./hyperexecute --user <USERNAME> --key <ACCESS_KEY> --config yaml/maestro.yaml`
+6. To start the test  `./hyperexecute --user <USERNAME> --key <ACCESS_KEY> --config maestro.yaml`

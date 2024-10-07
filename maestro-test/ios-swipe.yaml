@@ -1,0 +1,36 @@
+# appId: org.wikipedia
+# ---
+# - launchApp
+#flow_contacts_android.yaml
+# appId: com.android.chrome
+# ---
+# - launchApp
+# - tapOn: "Create new contact"
+# - tapOn: "First Name"
+# - inputText: "John"
+# - tapOn: "Last Name"
+# - inputText: "Snow"
+# - tapOn: "Save"
+# - assertVisible: "Add Phone Number"
+
+# - tapOn:
+#   element: "Address Bar"
+
+# - inputText:
+#   element: "Address Bar"
+#   text: "lambdatest"
+
+# - tapOn:
+#   element: "Search Button"
+
+appId: org.wikipedia
+---
+- launchApp
+- tapOn:
+    id: "org.wikipedia:id/fragment_onboarding_forward_button"
+- tapOn:
+    id: "org.wikipedia:id/fragment_onboarding_forward_button"
+- tapOn:
+    id: "org.wikipedia:id/fragment_onboarding_forward_button"
+- tapOn:
+    id: "org.wikipedia:id/fragment_onboarding_done_button"

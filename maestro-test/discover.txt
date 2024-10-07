@@ -1,2 +1,2 @@
-android-swipe.yaml
-android-launch.yaml
+ios-launch.yaml
+ios-swipe.yaml
