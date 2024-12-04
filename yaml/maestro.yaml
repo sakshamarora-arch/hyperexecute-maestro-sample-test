@@ -48,7 +48,7 @@ framework:
     # Enable or disable device log support
     deviceLog: true
     # App ID to be installed (mandatory field, using <app_id>)
-    appId: <app-id>
+    appId: lt://APP_ID
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
     # All devices are in a private cloud
@@ -61,4 +61,4 @@ framework:
     isRealMobile: true
     reservation: false
     platformName: android
-jobLabel: ['HyperExecute', 'Maestro', 'Real Device']
+jobLabel: ['HYP', 'Maestro', 'Android-RD']
