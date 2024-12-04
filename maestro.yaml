@@ -29,7 +29,7 @@ framework:
     devices: ["iPhone 14.*"]
     video: true
     deviceLog: true
-    appId: APP_ID
+    appId: lt://APP_ID
     buildName: maestro-ios-simulator
     privateCloud: true
     queueTimeout: 600
@@ -39,4 +39,4 @@ framework:
     reservation: false
     platformName: ios
 
-jobLabel: ['HyperExecute', 'Maestro', 'iOS-Simulator']
+jobLabel: ['HYP', 'Maestro', 'Simulator']
