@@ -8,7 +8,7 @@ autosplit: true
 runson: android
 
 # Set the concurrency level for test execution (2 devices in parallel)
-concurrency: 1
+concurrency: 2
 
 # Test discovery configuration
 testDiscovery:
@@ -32,9 +32,12 @@ dynamicAllocation: true
 # will need java and maestro inside the container
 pre:
   - chmod +x ./maestro-test/setup-script.sh
+  - chmod +x ./maestro-test/runTest.sh
+  - maestro-test/setup-script.sh
 
 env:
   MAESTRO: true
+  MAESTRO_LOGS_DIR: MaestroLogs
 
 # Test framework configuration
 framework:
@@ -42,13 +45,13 @@ framework:
   name: raw
   args:
     # List of devices to run tests on (two Pixel 5 devices in this case)
-    devices: [".*"]
+    devices: ["Pixel 6"]
     # Enable or disable video recording support
     video: true
     # Enable or disable device log support
     deviceLog: true
     # App ID to be installed (mandatory field, using <app_id>)
-    appId: lt://APP_ID
+    appId: lt://APP10160381611749039181933184
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
     # All devices are in a private cloud

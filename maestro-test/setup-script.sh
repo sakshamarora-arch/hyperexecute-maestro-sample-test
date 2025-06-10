@@ -9,7 +9,7 @@ sudo rm -rf /usr/lib/android-sdk/platform-tools
 sudo mkdir -p /usr/local/android-sdk
 
 cd /usr/local/android-sdk/ 
-sudo curl -OL https://dl.google.com/android/repository/platform-tools_r34.0.5-linux.zip 
+sudo curl -OL https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 sudo unzip platform-tools-latest-linux.zip 
 sudo rm -f platform-tools-latest-linux.zip  
 sudo ln -s /usr/local/android-sdk/platform-tools/adb /usr/bin/adb  
