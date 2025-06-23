@@ -44,8 +44,8 @@ framework:
   # Name of the test framework (raw in this case)
   name: raw
   args:
-    # List of devices to run tests on (two Pixel 5 devices in this case)
-    devices: ["Pixel 6"]
+    # List of devices to run tests on (Pixel 8 to 14 devices in this case)
+    devices: ["Pixel 8-14"]
     # Enable or disable video recording support
     video: true
     # Enable or disable device log support
@@ -54,14 +54,11 @@ framework:
     appId: lt://APP10160381611749039181933184
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
-    # All devices are in a private cloud
-    privateCloud: true
     # Timeout for device queue
     queueTimeout: 600
     # Configuration fields specific to running raw tests
     region: ap
     disableReleaseDevice: true
-    isRealMobile: true
     reservation: false
     platformName: android
 jobLabel: ['HYP', 'Maestro', 'Android', 'Emulator']

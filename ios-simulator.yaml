@@ -54,14 +54,11 @@ framework:
     appId: lt://iOS_APP_ID
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
-    # All devices are in a private cloud
-    privateCloud: true
     # Timeout for device queue
     queueTimeout: 600
     # Configuration fields specific to running raw tests
     region: ap
     disableReleaseDevice: true
-    isRealMobile: true
     reservation: false
     platformName: android
 jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
