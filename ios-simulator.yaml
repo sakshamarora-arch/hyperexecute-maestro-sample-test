@@ -51,7 +51,7 @@ framework:
     # Enable or disable device log support
     deviceLog: true
     # App ID to be installed (mandatory field, using <app_id>)
-    appId: lt://iOS_APP_ID
+    appId: lt://iOS_APP_ID   #Need to upload .zip file
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
     # Timeout for device queue
@@ -60,5 +60,7 @@ framework:
     region: ap
     disableReleaseDevice: true
     reservation: false
+    isRealMobile: false
+    network: true
     platformName: android
 jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
