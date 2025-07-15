@@ -60,5 +60,7 @@ framework:
     region: ap
     disableReleaseDevice: true
     reservation: false
+    isRealMobile: false
+    network: true
     platformName: android
 jobLabel: ['HYP', 'Maestro', 'Android', 'Emulator']
