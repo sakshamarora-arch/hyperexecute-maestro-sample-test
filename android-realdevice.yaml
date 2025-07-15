@@ -63,5 +63,6 @@ framework:
     disableReleaseDevice: true
     isRealMobile: true
     reservation: false
+    network: true
     platformName: android
 jobLabel: ['HYP', 'Maestro', 'Android-RD']
