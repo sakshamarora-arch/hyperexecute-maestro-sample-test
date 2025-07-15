@@ -54,8 +54,6 @@ framework:
     appId: lt://APP10160381611749039181933184
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
-    # All devices are in a private cloud
-    privateCloud: true
     # Timeout for device queue
     queueTimeout: 600
     # Configuration fields specific to running raw tests

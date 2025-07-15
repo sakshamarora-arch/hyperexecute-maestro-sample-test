@@ -20,7 +20,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest.sh $test
+testRunnerCommand: ./maestro-test/runTest_android_emulator.sh $test
 
 # Only report the status of the test framework
 frameworkStatusOnly: true
@@ -32,7 +32,7 @@ dynamicAllocation: true
 # will need java and maestro inside the container
 pre:
   - chmod +x ./maestro-test/setup-script.sh
-  - chmod +x ./maestro-test/runTest.sh
+  - chmod +x ./maestro-test/runTest_android_emulator.sh
   - maestro-test/setup-script.sh
 
 env:
