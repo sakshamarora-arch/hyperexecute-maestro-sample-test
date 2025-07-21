@@ -20,7 +20,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest.sh $test
+testRunnerCommand: ./maestro-test/runTest_ios.sh $test
 
 # Only report the status of the test framework
 frameworkStatusOnly: true
@@ -32,7 +32,7 @@ dynamicAllocation: true
 # will need java and maestro inside the container
 pre:
   - chmod +x maestro-test/setup-script-iOS.sh
-  - chmod +x ./maestro-test/runTest.sh
+  - chmod +x ./maestro-test/runTest_ios.sh
   - maestro-test/setup-script-iOS.sh
 
 env:
@@ -62,5 +62,5 @@ framework:
     reservation: false
     isRealMobile: false
     network: true
-    platformName: android
+    platformName: ios
 jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
