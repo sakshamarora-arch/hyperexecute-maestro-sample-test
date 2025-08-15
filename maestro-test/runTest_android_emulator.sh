@@ -8,4 +8,4 @@ adb shell svc wifi disable
 # check the maestro version
 /home/ltuser/.maestro/bin/maestro -v
 # Running the maestro test this can run several tests as passed in the test discovery
-/home/ltuser/.maestro/bin/maestro test $1 --debug-output ./MaestroLogs
+/home/ltuser/.maestro/bin/maestro test $1 --debug-output ./MaestroLogs --format junit

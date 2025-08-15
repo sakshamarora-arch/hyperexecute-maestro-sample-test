@@ -4,40 +4,14 @@ version: "0.2"
 # Enable autosplit for test execution
 autosplit: true
 
-# Specify the target platform for test execution (Android in this case)
-runson: android
-
 # Set the concurrency level for test execution (2 devices in parallel)
 concurrency: 2
 
-# Test discovery configuration
-testDiscovery:
-  # Command to discover tests from the test.txt file
-  command: cat ./maestro-test/discover.txt
-  # Test discovery mode can be static/dynamic
-  mode: static
-  # Test type is raw (custom test implementation)
-  type: raw
-
-# Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest.sh $test
-
-# Only report the status of the test framework
-frameworkStatusOnly: true
+# Specify the target platform for test execution (Android in this case)
+runson: android
 
 # Enable dynamic allocation of resources
 dynamicAllocation: true
-
-# Pre-install required dependencies using pip
-# will need java and maestro inside the container
-pre:
-  - chmod +x ./maestro-test/setup-script.sh
-  - chmod +x ./maestro-test/runTest.sh
-  - maestro-test/setup-script.sh
-
-env:
-  MAESTRO: true
-  MAESTRO_LOGS_DIR: MaestroLogs
 
 # Test framework configuration
 framework:
@@ -63,4 +37,37 @@ framework:
     reservation: false
     network: true
     platformName: android
+
+env:
+  MAESTRO: true
+  MAESTRO_LOGS_DIR: MaestroLogs
+
+# Pre-install required dependencies using pip
+# will need java and maestro inside the container
+pre:
+  - chmod +x ./maestro-test/setup-script.sh
+  - chmod +x ./maestro-test/runTest.sh
+  - maestro-test/setup-script.sh
+
+# Test discovery configuration
+testDiscovery:
+  # Command to discover tests from the test.txt file
+  command: cat ./maestro-test/discover.txt
+  # Test discovery mode can be static/dynamic
+  mode: static
+  # Test type is raw (custom test implementation)
+  type: raw
+
+# Command to run the tests using the testRunnerCommand
+testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml 
+
+# Only report the status of the test framework
+frameworkStatusOnly: true
+
+report: true
+partialReports:
+  - location: .
+    type: xml
+    frameworkName: junit
+
 jobLabel: ['HYP', 'Maestro', 'Android-RD']
