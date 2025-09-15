@@ -1,0 +1,74 @@
+# Define the version of the configuration file
+version: "0.2"
+
+runson: android
+
+# Enable autosplit for test execution
+autosplit: true
+
+# Set the concurrency level for test execution (3 devices in parallel)
+concurrency: 3
+
+# Enable dynamic allocation of resources
+dynamicAllocation: true
+
+# Runtime configuration for Java-based environment
+runtime:
+  language: java
+  version: 21
+
+# Environment variables required for Maestro execution
+env:
+  MAESTRO: true
+
+# Shell environment to use
+shell: bash
+
+# Enable differential upload of test artifacts
+differentialUpload:
+  enabled: true
+
+# Test framework configuration
+framework:
+  # Name of the test framework (raw in this case)
+  name: raw
+  args:
+    # List of devices to run tests on (wildcard matching pattern for iOS devices)
+    devices: [".*-.*", ".*-.*", ".*-.*"]
+    # Enable or disable video recording support
+    video: true
+    # Enable or disable device log support
+    deviceLog: true
+    # App ID to be installed (mandatory field, using new iOS sample app)
+    appId: NewiOSSampleApp
+    # Build name for identification on the automation dashboard
+    buildName: RD-maestro-final-try3
+    # Timeout for device queue
+    queueTimeout: 600
+    # Disable automatic release of device after test execution
+    disableReleaseDevice: true
+    # Flag to indicate usage of real mobile devices
+    isRealMobile: true
+    # Specify platform as iOS
+    platformName: ios
+    # Region for device allocation
+    region: us
+
+# Pre-install required dependencies or execute setup scripts
+pre:
+  - chmod +x ./maestro-test/runTest_rd_iOS.sh
+
+# Test discovery configuration
+testDiscovery: 
+  # Command to discover tests from the discover.txt file
+  command: cat maestro-test/discover-iOS.txt
+  # Test discovery mode can be static/dynamic
+  mode: static
+  # Test type is raw (custom test implementation)
+  type: raw
+
+# Command to run the tests using the testRunnerCommand
+testRunnerCommand: maestro-test/runTest_rd_iOS.sh $test
+
+# Labels to categorize the job
+jobLabel: ['HYP', 'Maestro', 'RD-ios']
