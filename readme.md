@@ -16,5 +16,5 @@ curl -u "<username>:<accessKey>" -X POST "https://manual-api.lambdatest.com/app/
 ```
 6. To start the test  `./hyperexecute --user <USERNAME> --key <ACCESS_KEY> --config yaml/maestro.yaml`
 
-7. If using iOS-Real device, you would need to install the following jar file and add it to your payload https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar
+7. For iOS real devices, install the following JAR file and include it in your payload. https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar
 
