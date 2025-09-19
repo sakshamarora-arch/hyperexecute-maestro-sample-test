@@ -40,9 +40,9 @@ framework:
     # Enable or disable device log support
     deviceLog: true
     # App ID to be installed (mandatory field, using new iOS sample app)
-    appId: NewiOSSampleApp
+    appId: #enter 
     # Build name for identification on the automation dashboard
-    buildName: RD-maestro-final-try3
+    buildName: RD-maestro
     # Timeout for device queue
     queueTimeout: 600
     # Disable automatic release of device after test execution
