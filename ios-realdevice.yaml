@@ -68,7 +68,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: maestro-test/runTest_rd_iOS.sh $test
+testRunnerCommand: maestro-test/runTest_ios_realdevice.sh $test
 
 # Labels to categorize the job
-jobLabel: ['HYP', 'Maestro', 'RD-ios']
+jobLabel: ['HYP', 'Maestro', 'RD-ios'] 
